@@ -49,6 +49,10 @@ resource "alicloud_eci_container_group" "interactsh-web" {
       port     = 80
       protocol = "TCP"
     }
+    ports {
+      port     = 3000
+      protocol = "TCP"
+    }
 
     commands = ["yarn", "start"]
   }
