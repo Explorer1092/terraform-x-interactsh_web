@@ -36,7 +36,7 @@ resource "alicloud_eci_container_group" "interactsh-web" {
 
   containers {
 
-    image             = "projectdiscovery/interactsh-web"
+    image             = "htid/interactsh-web:latest"
     name              = "${var.name_prefix}interactsh-web"
     image_pull_policy = "IfNotPresent"
 
