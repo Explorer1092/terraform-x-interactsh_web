@@ -20,7 +20,7 @@ variable "security_group_id" {
   type = string
 }
 
-resource "alicloud_eci_container_group" "interactsh" {
+resource "alicloud_eci_container_group" "interactsh-web" {
 
   container_group_name = "${var.name_prefix}interactsh-web"
   cpu                  = 1
@@ -55,10 +55,10 @@ resource "alicloud_eci_container_group" "interactsh" {
 
 }
 
-output "interactsh_public_ip" {
-  value = alicloud_eci_container_group.interactsh.internet_ip
+output "interactsh-web_public_ip" {
+  value = alicloud_eci_container_group.interactsh-web.internet_ip
 }
 
-output "interactsh_private_ip" {
-  value = alicloud_eci_container_group.interactsh.intranet_ip
+output "interactsh-web_private_ip" {
+  value = alicloud_eci_container_group.interactsh-web.intranet_ip
 }
