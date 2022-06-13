@@ -55,10 +55,10 @@ resource "alicloud_eci_container_group" "interactsh-web" {
 
 }
 
-output "interactsh-web_public_ip" {
+output "public_ip" {
   value = alicloud_eci_container_group.interactsh-web.internet_ip
 }
 
-output "interactsh-web_private_ip" {
+output "private_ip" {
   value = alicloud_eci_container_group.interactsh-web.intranet_ip
 }
