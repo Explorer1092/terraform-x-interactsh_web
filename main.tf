@@ -44,6 +44,10 @@ resource "alicloud_eci_container_group" "interactsh-web" {
       key   = "PORT"
       value = 80
     }
+    environment_vars  {
+      key = "HOST"
+      value = "0.0.0.0"
+    }
 
     ports {
       port     = 80
@@ -54,7 +58,7 @@ resource "alicloud_eci_container_group" "interactsh-web" {
       protocol = "TCP"
     }
 
-    commands = ["yarn", "start"]
+    commands = ["craco","start"]
   }
 
 }
